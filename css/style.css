@@ -238,3 +238,66 @@ banner .container{
 @keyframes aylana{
   100%{transform: rotate(360deg);}
 }
+
+/* services start */
+
+.services{
+  padding: 80px 0;
+  background-color: var(--text-color-white);
+}
+
+.services .container{
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
+  gap: 10px;
+}
+
+.service-content{
+  position: relative;
+  background: var(--background-color);
+  padding: 50px 30px;
+  border-radius: 16px;
+  border: none;
+  transition: transform 0.2s ease-in-out,background-color 0.2s ease-in-out;
+}
+
+@media(min-width:768px){
+  .services .container{
+  grid-template-columns: repeat(2,1fr);
+  gap: 20px;
+ 
+  }
+}
+
+@media(min-width:1024px){
+ 
+  .services .container{
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+  }
+}
+
+.service-content .service-icon{
+  display: inline-block;
+  font-size: 60px;
+ color: var(--primary-color);
+}
+
+.service-content h5{
+  font-family: "Pacifico",cursive;
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+
+.service-content:hover{
+  transform: translateY(-10px);
+  background-color: var(--primary-color);
+} 
+
+.services .service-content:hover .service-icon,
+.services .service-content:hover h5,
+.services .service-content:hover p{
+  color: var(--text-color-white);
+}
+/* services end */

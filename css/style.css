@@ -1,7 +1,6 @@
 /* Import fonts */
 @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700&family=Nunito:wght@300;400;600;700;800&family=Pacifico&display=swap');
 
-
 /* Color variables */
 :root {
   --primary-color: #e5612f;
@@ -11,36 +10,105 @@
   --heading-color: #343a40;
   --border-color: #dee2e6;
   --text-color-white: #ffffff;
-  --hero-overlay-left: rgba(0,0,0,0.55);
-  --hero-overlay-mid: rgba(0,0,0,0.35);
-  --hero-overlay-right: rgba(0,0,0,0.12);
+  --hero-overlay-left: rgba(0, 0, 0, 0.55);
+  --hero-overlay-mid: rgba(0, 0, 0, 0.35);
+  --hero-overlay-right: rgba(0, 0, 0, 0.12);
   --green-block: rgba(86, 142, 91, 0.92);
 }
 
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-html{
-  scroll-behavior: smooth;  /* scrol qilganda animatsiya yaxshiroq bo`lishi  uchun */
+html {
+  scroll-behavior: smooth; /* scrol qilganda animatsiya yaxshiroq bo`lishi  uchun */
 }
-                 
-body{
-  font-family:"Heebo","Nunito",system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+body {
+  font-family: 'Heebo', 'Nunito', system-ui, -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
+    sans-serif;
   font-weight: 400;
   background-color: var(--text-color-white);
 }
 
-h1,h2,h3,h4,h5,h6{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0;
-  font-family: "Nunito",sans-serif;
+  font-family: 'Nunito', sans-serif;
   font-weight: 800;
   color: var(--heading-color);
 }
+/* loader start */
+.loader {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background-color);
+  z-index: 999;
+}
 
-header{
+.loader p {
+  font-family: 'Pacifico', cursive;
+  font-size: 60px;
+}
+
+.loader .loader-icon {
+  font-size: 4em;
+  color: var(--primary-color);
+  animation: rotate 2000ms infinite;
+  transition: rotate initial;
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loader .loader-span {
+  display: flex;
+  gap: 10px;
+  width: 100px;
+}
+
+.loader-span span {
+  background-color: var(--secondary-color);
+  height: 20px;
+  width: 20px;
+  border-radius: 50px;
+ /*  opacity: 0;  *//* ko`rinmay turadi */
+  animation: loader-span 2000ms infinite alternate;
+}
+
+@keyframes loader-span {
+  to {
+    transform: scale(1.3);
+    background-color: var(--primary-color);
+  }
+}
+
+.loader-span span:nth-child(2) {
+  animation-delay: 400ms;
+}
+
+.loader-span span:nth-child(3) {
+  animation-delay: 800ms;
+}
+
+/* loader start */
+
+header {
   position: fixed;
   top: 0;
   left: 0;
@@ -48,40 +116,42 @@ header{
   z-index: 900;
   padding: 15px 0;
   background: transparent;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.46);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.46);
 }
 
-header.scrolled{
-  background:var(--primary-color);
+header.scrolled {
+  background: var(--primary-color);
   padding: 12px 0;
 }
 
-.container{
+.container {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 90%;
   max-width: 1400px;
   margin: 0 auto;
-  
-  
 }
 
-.logo{
+.logo {
   display: flex;
   align-items: center;
   gap: 12px;
   z-index: 10;
 }
 
-.logo h1{
-  font-family: 'Pacifico',cursive;
+.logo i {
+  font-size: 50px;
+}
+
+.logo h1 {
+  font-family: 'Pacifico', cursive;
   color: var(--text-color-white);
-  font-size: 30px;
+  font-size: 50px;
   font-weight: 700;
 }
 
-.menus{
+.menus {
   display: flex;
   flex: 1;
   justify-content: center;
@@ -89,32 +159,32 @@ header.scrolled{
   z-index: 10;
 }
 
-.menus ul{
+.menus ul {
   list-style: none;
   display: flex;
   gap: 35px;
   align-items: center;
 }
 
-.menus ul li{
+.menus ul li {
   position: relative;
 }
 
-.menus ul li a{
+.menus ul li a {
   text-decoration: none;
   color: var(--text-color-white);
-  font-family: "Heebo",sans-serif;
+  font-family: 'Heebo', sans-serif;
   text-transform: uppercase;
   font-size: 20px;
   letter-spacing: 2px;
   padding: 6px 4px;
 }
 
-.menus>ul>li::after{
-  content: "";
+.menus > ul > li::after {
+  content: '';
   position: absolute;
   width: 100%;
-  height: 5px;
+  height: 3px;
   left: 0;
   bottom: -8px;
   background-color: var(--primary-color);
@@ -123,32 +193,31 @@ header.scrolled{
   transition: transform 0.3s ease;
 }
 
-.menus>ul>li:hover::after{
+.menus > ul > li:hover::after {
   transform: scaleX(1);
 }
 
-.header.scrolled.menus>ul>li::after{
+.header.scrolled.menus > ul > li::after {
   background-color: var(--text-color-white);
 }
 
-.icons{
+.icons {
   display: flex;
   gap: 20px;
   align-items: center;
   z-index: 10;
 }
 
-.icons i{
+.icons i {
   color: var(--text-color-white);
   font-size: 20px;
   cursor: pointer;
-
 }
 
-.banner{
+.banner {
   width: 100%;
   min-height: 820px;
-  background-image: url("../imagess/banner.png");
+  background-image: url('../imagess/banner.png');
   background-size: cover;
   background-position: center center;
   position: relative;
@@ -158,13 +227,13 @@ header.scrolled{
   overflow: hidden;
 }
 
-.banner::before{
-  content: "";
+.banner::before {
+  content: '';
   position: absolute;
   inset: 0;
 }
 
-banner .container{
+banner .container {
   position: relative;
   z-index: 2;
   width: 90%;
@@ -177,13 +246,13 @@ banner .container{
   padding: 40px 0;
 }
 
-.l-content{
+.l-content {
   max-width: 50%;
   flex-basis: 50%;
 }
 
-.l-content h1{
-  font-family: "Nunito",sans-serif;
+.l-content h1 {
+  font-family: 'Nunito', sans-serif;
   font-size: 70px;
   font-weight: 800;
   color: var(--text-color-white);
@@ -191,19 +260,18 @@ banner .container{
   letter-spacing: 1px;
 }
 
-.l-content p{
+.l-content p {
   display: inline-block;
-  max-width:700px;
+  max-width: 700px;
   pad: 10px;
   border-radius: 2px;
   color: var(--text-color-white);
   font-size: 18px;
   margin-bottom: 25px;
   line-height: 1.45;
-
 }
 
-.l-content a{
+.l-content a {
   display: inline-block;
   background: var(--primary-color);
   color: var(--text-color-white);
@@ -213,11 +281,9 @@ banner .container{
   padding: 14px 30px;
   border-radius: 40px;
   text-transform: uppercase;
-  
 }
 
-
-.r-content{
+.r-content {
   flex-basis: 50%;
   max-width: 50%;
   display: flex;
@@ -225,8 +291,7 @@ banner .container{
   align-items: center;
 }
 
-
-.r-content img{
+.r-content img {
   width: 600px;
   border-radius: 50%;
   height: auto;
@@ -235,69 +300,114 @@ banner .container{
   animation: aylana 60s linear infinite;
 }
 
-@keyframes aylana{
-  100%{transform: rotate(360deg);}
+@keyframes aylana {
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /* services start */
 
-.services{
+.services {
   padding: 80px 0;
   background-color: var(--text-color-white);
 }
 
-.services .container{
+.services .container {
   display: grid;
-  grid-template-columns: repeat(1,1fr);
+  grid-template-columns: repeat(1, 1fr);
   gap: 10px;
 }
 
-.service-content{
+.service-content {
   position: relative;
   background: var(--background-color);
   padding: 50px 30px;
   border-radius: 16px;
   border: none;
-  transition: transform 0.2s ease-in-out,background-color 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
 }
 
-@media(min-width:768px){
-  .services .container{
-  grid-template-columns: repeat(2,1fr);
-  gap: 20px;
- 
+@media (min-width: 768px) {
+  .services .container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
   }
 }
 
-@media(min-width:1024px){
- 
-  .services .container{
+@media (min-width: 1024px) {
+  .services .container {
     grid-template-columns: repeat(4, 1fr);
     gap: 30px;
   }
 }
 
-.service-content .service-icon{
+.service-content .service-icon {
   display: inline-block;
   font-size: 60px;
- color: var(--primary-color);
+  color: var(--primary-color);
 }
 
-.service-content h5{
-  font-family: "Pacifico",cursive;
+.service-content h5 {
+  font-family: 'Pacifico', cursive;
   font-size: 20px;
   margin-bottom: 5px;
 }
 
-
-.service-content:hover{
+.service-content:hover {
   transform: translateY(-10px);
   background-color: var(--primary-color);
-} 
+}
 
 .services .service-content:hover .service-icon,
 .services .service-content:hover h5,
-.services .service-content:hover p{
+.services .service-content:hover p {
   color: var(--text-color-white);
 }
+
+/* 
+.service-content::after{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  bottom: -8px;
+  background-color: var(--primary-color);
+  transform-origin: left center;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+  border-radius: 16px;
+}
+
+.service-content:hover::after{
+  transform: scaleX(1);
+}
+
+.services .service-content::after p{
+
+  color: var(--text-color-white);
+
+} */
+
 /* services end */
+
+.container .scrol {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+.container .scrol i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  border: 3px solid var(--text-color-white);
+  height: 20px;
+  width: 20px;
+  box-shadow: var(--background-color);
+  color: var(--background-color);
+}

@@ -142,6 +142,7 @@ header.scrolled {
 
 .logo i {
   font-size: 50px;
+  color: var(--text-color-white);
 }
 
 .logo h1 {
@@ -233,7 +234,7 @@ header.scrolled {
   inset: 0;
 }
 
-banner .container {
+.banner .container {
   position: relative;
   z-index: 2;
   width: 90%;
@@ -411,3 +412,5 @@ banner .container {
   box-shadow: var(--background-color);
   color: var(--background-color);
 }
+
+

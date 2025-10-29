@@ -1,3 +1,4 @@
+/* scrol bo`lganda header rangi o`zgarish */
 window.addEventListener("scroll",function(){
   const header=this.document.querySelector("header")
   if (this.window.scrollY>20){
@@ -8,11 +9,19 @@ window.addEventListener("scroll",function(){
   }
 })
 
+
+/* scrol qilganda boshiga qaytish */
 const scrol=document.querySelector(".scrol");
-scrol.addEventListener("click", function(){
+window.addEventListener("scroll", () => {
+  scrol.classList.toggle("show", window.scrollY > 300);
+});
 
-})
+scrol.addEventListener("click", () => {
+  window.scrollTo({ top: 0 });
+});
 
+
+/* loader uchun javascript */
 document.addEventListener("DOMContentLoaded",function(){
   const loader=document.querySelector(".loader");
   setTimeout(()=>{

@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Restoran</title>
     <link rel="stylesheet" href="css/style.css" />
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
@@ -25,13 +28,135 @@
         <span></span>
         <span></span>
       </div>
-
     </div>
 
     <!--loading end-->
 
+    <!--shopping cart start-->
+    <div class="shopping-cart" id="cart" id="reverse">
+      <!--header start-->
+      <div class="shopping-cart-header">
+        <h2>Review your Cart</h2>
+        <i class="fa-solid fa-xmark" onclick="Fu()"></i>
+      </div>
+      <!--header end-->
 
+      <!--body start-->
+      <div class="shopping-cart-body">
+        <!--item 1-->
+        <div class="shopping-item">
+          <div class="item-image">
+            <img src="/imagess/product-1.jpg" alt="itme 1" />
+          </div>
 
+          <div class="item-details">
+            <h3>The Cracker Barrel's Country Boy Breakfast</h3>
+            <div class="shopping-cart-counter">
+              <i class="fa-solid fa-minus"></i>
+              <span>1</span>
+              <i class="fa-solid fa-plus"></i>
+            </div>
+          </div>
+
+          <div class="item-price">
+            <p>$25.0</p>
+          </div>
+        </div>
+
+        <div class="shopping-item">
+          <div class="item-image">
+            <img src="/imagess/prodeuct-2.jpg" alt="itme 1" />
+          </div>
+
+          <div class="item-details">
+            <h3>The Cracker Barrel's Country Boy Breakfast</h3>
+            <div class="shopping-cart-counter">
+              <i class="fa-solid fa-minus"></i>
+              <span>1</span>
+              <i class="fa-solid fa-plus"></i>
+            </div>
+          </div>
+
+          <div class="item-price">
+            <p>$25.0</p>
+          </div>
+        </div>
+
+        <div class="shopping-item">
+          <div class="item-image">
+            <img src="/imagess/product-3.jpg" alt="itme 1" />
+          </div>
+
+          <div class="item-details">
+            <h3>The Cracker Barrel's Country Boy Breakfast</h3>
+            <div class="shopping-cart-counter">
+              <i class="fa-solid fa-minus"></i>
+              <span>1</span>
+              <i class="fa-solid fa-plus"></i>
+            </div>
+          </div>
+
+          <div class="item-price">
+            <p>$25.0</p>
+          </div>
+        </div>
+
+        <div class="shopping-item">
+          <div class="item-image">
+            <img src="/imagess/product-3.jpg" alt="itme 1" />
+          </div>
+
+          <div class="item-details">
+            <h3>The Cracker Barrel's Country Boy Breakfast</h3>
+            <div class="shopping-cart-counter">
+              <i class="fa-solid fa-minus"></i>
+              <span>1</span>
+              <i class="fa-solid fa-plus"></i>
+            </div>
+          </div>
+
+          <div class="item-price">
+            <p>$25.0</p>
+          </div>
+        </div>
+      </div>
+
+      <!--body end-->
+
+      <!--footer start-->
+      <div class="shopping-cart-footer">
+        <div class="shopping-cart-layout">
+          <div class="shopping-cart-layout-l">
+            <h4>Subtotal</h4>
+            <p>Shipping & taxes calculated at checkout</p>
+          </div>
+          <div class="shopping-cart-layout-r">
+            <p>$92.0</p>
+          </div>
+        </div>
+
+        <div class="shopping-footer-buttons">
+          <a href="">checkout</a>
+          <a href="">Continue shopping</a>
+        </div>
+      </div>
+
+      <!--footer end-->
+    </div>
+    <!--shopping cart end-->
+
+    <!--search-->
+    <div class="container-search" id="rever">
+      <div class="reverse">
+        <i class="fa-solid fa-xmark" onclick="End()"></i>
+      </div>
+      <div class="search">
+        <input type="text" placeholder="Enter any text here..." />
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </div>
+    </div>
+
+    <!--search-->
 
     <!--header start-->
     <header>
@@ -52,8 +177,8 @@
         </div>
 
         <div class="icons">
-          <i class="fa-solid fa-magnifying-glass"></i>
-          <i class="fa-solid fa-bag-shopping"></i>
+          <i class="fa-solid fa-magnifying-glass" onclick="End()"></i>
+          <i class="fa-solid fa-bag-shopping" onclick="Fu()"></i>
         </div>
       </div>
     </header>
@@ -66,7 +191,7 @@
       <!--banner start-->
       <section class="banner">
         <div class="container">
-          <div class="l-content">
+          <div class="l-content" data-aos="fade-right">
             <h1>
               Enjoy Our <br />
               Delicious Meal
@@ -80,7 +205,8 @@
 
             <a href="#">Book a Table</a>
           </div>
-          <div class="r-content">
+
+          <div class="r-content" data-aos="fade-left">
             <img src="imagess/image.png" alt="banner" />
           </div>
         </div>
@@ -90,7 +216,7 @@
       <!--serverce start-->
       <section class="services">
         <div class="container">
-          <div class="service-content">
+          <div class="service-content" data-aos="fade-down-right">
             <div class="service-icon">
               <i class="fa-solid fa-user-tie"></i>
             </div>
@@ -101,7 +227,7 @@
             </p>
           </div>
 
-          <div class="service-content">
+          <div class="service-content" data-aos="fade-down">
             <div class="service-icon">
               <i class="fa-solid fa-utensils"></i>
             </div>
@@ -112,7 +238,7 @@
             </p>
           </div>
 
-          <div class="service-content">
+          <div class="service-content" data-aos="fade-up">
             <div class="service-icon">
               <i class="fa-solid fa-cart-plus"></i>
             </div>
@@ -123,7 +249,7 @@
             </p>
           </div>
 
-          <div class="service-content">
+          <div class="service-content" data-aos="fade-down-left">
             <div class="service-icon">
               <i class="fa-solid fa-headset"></i>
             </div>
@@ -134,17 +260,791 @@
             </p>
           </div>
         </div>
+
+        <!--scrol qismi-->
+        <div class="container">
+          <div class="scrol">
+            <i class="fa-solid fa-chevron-up"></i>
+          </div>
+        </div>
+      </section>
+      <!--serverce end-->
+
+      <!-- About start -->
+      <section class="about">
+        <div class="container">
+          <div class="about-left">
+            <div class="about-image" data-aos="fade-right">
+              <img src="imagess/about-1.jpg" alt="about 1" />
+            </div>
+            <div class="about-image" data-aos="fade-up">
+              <img src="imagess/about-2.jpg" alt="about 2" />
+            </div>
+            <div class="about-image" data-aos="fade-right">
+              <img src="imagess/about-3.jpg" alt="about 3" />
+            </div>
+            <div class="about-image" data-aos="fade-up">
+              <img src="imagess/about-4.jpg" alt="about 4" />
+            </div>
+          </div>
+
+          <div class="about-right" data-aos="fade-left">
+            <h5>About Us</h5>
+            <h2>Welcome to <i class="fa-solid fa-utensils"></i> Restoran</h2>
+            <p>
+              Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu
+              diam amet diam et eos erat ipsum et lorem et sit, sed stet lorem
+              sit.
+            </p>
+
+            <p>
+              Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu
+              diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet
+              lorem sit clita duo justo magna dolore erat amet
+            </p>
+
+            <div class="about-right-container">
+              <div class="about-right-container-l">
+                <h1>15</h1>
+                <div class="container-ps">
+                  <p>Yers of</p>
+                  <h6>Experience</h6>
+                </div>
+              </div>
+
+              <div class="about-right-container-l">
+                <h1>50</h1>
+                <div class="container-ps">
+                  <p>Papular</p>
+                  <h6>Master Chefs</h6>
+                </div>
+              </div>
+            </div>
+            <a href="#">Read More</a>
+          </div>
+        </div>
+      </section>
+      <!-- About end -->
+
+      <!--Our menu start-->
+
+      <section class="our-menu">
+        <div class="container">
+          <!--Section title-->
+          <div class="section-title" data-aos="fade-right">
+            <h5>Our Menu</h5>
+            <h2>Tasty And Good Price</h2>
+          </div>
+          <!--Section end-->
+
+          <!--Slider icon start-->
+          <div class="slider-menus" data-aos="fade-left">
+            <div class="slider-indicators">
+              <div class="indicators-icons">
+                <i class="fa-solid fa-mug-saucer"></i>
+              </div>
+              <div class="indicators-title">
+                <h5>Brekfast</h5>
+              </div>
+            </div>
+
+            <div class="slider-indicators">
+              <div class="indicators-icons">
+                <i class="fas fa-utensils"></i>
+              </div>
+              <div class="indicators-title">
+                <h5>Lunch</h5>
+              </div>
+            </div>
+
+            <div class="slider-indicators">
+              <div class="indicators-icons">
+                <i class="fas fa-hamburger"></i>
+              </div>
+              <div class="indicators-title">
+                <h5>Dinner</h5>
+              </div>
+            </div>
+
+            <div class="slider-indicators">
+              <div class="indicators-icons">
+                <i class="fas fa-ice-cream"></i>
+              </div>
+              <div class="indicators-title">
+                <h5>Desserts</h5>
+              </div>
+            </div>
+
+            <div class="slider-indicators">
+              <div class="indicators-icons">
+                <i class="fa-solid fa-martini-glass-citrus"></i>
+              </div>
+              <div class="indicators-title">
+                <h5>Drink</h5>
+              </div>
+            </div>
+          </div>
+          <!--Slider end-->
+
+          <!--Meals start-->
+          <div class="sliders" id="our-menus" data-aos="fade-up">
+            <!--slide 1-->
+            <div class="our-meal">
+              <div class="our-meal-left">
+                <img src="imagess/Meals_img.jpg" alt="slider deserts" />
+              </div>
+
+              <div class="our-meal-right">
+                <div class="item-wrapper">
+                  <div class="item-left">
+                    <h5>The Cracker Barrel's Country Boy Breakfast</h5>
+                    <p>
+                      Duis aute irure dolor in reprehenderit in voluptate velit
+                      esse cillum
+                    </p>
+                  </div>
+                  <div class="item-right">
+                    <span class="item-price">$25</span>
+                    <div class="item-btn">
+                      <a href="">Order</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="item-wrapper">
+                  <div class="item-left">
+                    <h5>Uncle Herschel's Favorite</h5>
+                    <p>
+                      Duis aute irure dolor in reprehenderit in voluptate velit
+                      esse cillum
+                    </p>
+                  </div>
+                  <div class="item-right">
+                    <span class="item-price">$45.0</span>
+                    <div class="item-btn">
+                      <a href="">Order</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="item-wrapper">
+                  <div class="item-left">
+                    <h5>Grandpa's Country Fried Breakfast</h5>
+                    <p>
+                      Duis aute irure dolor in reprehenderit in voluptate velit
+                      esse cillum
+                    </p>
+                  </div>
+                  <div class="item-right">
+                    <span class="item-price">$30.0</span>
+                    <div class="item-btn">
+                      <a href="">Order</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="item-wrapper">
+                  <div class="item-left">
+                    <h5>Old Timer's Meat Breakfast</h5>
+                    <p>
+                      Duis aute irure dolor in reprehenderit in voluptate velit
+                      esse cillum
+                    </p>
+                  </div>
+                  <div class="item-right">
+                    <span class="item-price">$12.0</span>
+                    <div class="item-btn">
+                      <a href="">Order</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="item-wrapper">
+                  <div class="item-left">
+                    <h5>Chinese Chicken Bread Spicy Soup</h5>
+                    <p>
+                      Duis aute irure dolor in reprehenderit in voluptate velit
+                      esse cillum
+                    </p>
+                  </div>
+                  <div class="item-right">
+                    <span class="item-price">$ 12.0</span>
+                    <div class="item-btn">
+                      <a href="">Order</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--slide 1-->
+
+            <!--slide 2-->
+            <div class="our-meal">
+              <div class="our-meal-left">
+                <img src="imagess/meals_2.jpg" alt="slider deserts" />
+              </div>
+
+              <div class="our-meal-right">
+                <div class="item-wrapper">
+                  <div class="item-left">
+                    <h5>The Cracker Barrel's Country Boy Breakfast</h5>
+                    <p>
+                      Duis aute irure dolor in reprehenderit in voluptate velit
+                      esse cillum
+                    </p>
+                  </div>
+                  <div class="item-right">
+                    <span class="item-price">$25</span>
+                    <div class="item-btn">
+                      <a href="">Order</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="item-wrapper">
+                  <div class="item-left">
+                    <h5>Uncle Herschel's Favorite</h5>
+                    <p>
+                      Duis aute irure dolor in reprehenderit in voluptate velit
+                      esse cillum
+                    </p>
+                  </div>
+                  <div class="item-right">
+                    <span class="item-price">$45.0</span>
+                    <div class="item-btn">
+                      <a href="">Order</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="item-wrapper">
+                  <div class="item-left">
+                    <h5>Grandpa's Country Fried Breakfast</h5>
+                    <p>
+                      Duis aute irure dolor in reprehenderit in voluptate velit
+                      esse cillum
+                    </p>
+                  </div>
+                  <div class="item-right">
+                    <span class="item-price">$30.0</span>
+                    <div class="item-btn">
+                      <a href="">Order</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="item-wrapper">
+                  <div class="item-left">
+                    <h5>Old Timer's Meat Breakfast</h5>
+                    <p>
+                      Duis aute irure dolor in reprehenderit in voluptate velit
+                      esse cillum
+                    </p>
+                  </div>
+                  <div class="item-right">
+                    <span class="item-price">$12.0</span>
+                    <div class="item-btn">
+                      <a href="">Order</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="item-wrapper">
+                  <div class="item-left">
+                    <h5>Chinese Chicken Bread Spicy Soup</h5>
+                    <p>
+                      Duis aute irure dolor in reprehenderit in voluptate velit
+                      esse cillum
+                    </p>
+                  </div>
+                  <div class="item-right">
+                    <span class="item-price">$ 12.0</span>
+                    <div class="item-btn">
+                      <a href="">Order</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--slide 2-->
+
+            <!--slide 3-->
+            <div class="our-meal">
+              <div class="our-meal-left">
+                <img src="imagess/Meals_img.jpg" alt="slider deserts" />
+              </div>
+
+              <div class="our-meal-right">
+                <div class="item-wrapper">
+                  <div class="item-left">
+                    <h5>The Cracker Barrel's Country Boy Breakfast</h5>
+                    <p>
+                      Duis aute irure dolor in reprehenderit in voluptate velit
+                      esse cillum
+                    </p>
+                  </div>
+                  <div class="item-right">
+                    <span class="item-price">$25</span>
+                    <div class="item-btn">
+                      <a href="">Order</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="item-wrapper">
+                  <div class="item-left">
+                    <h5>Uncle Herschel's Favorite</h5>
+                    <p>
+                      Duis aute irure dolor in reprehenderit in voluptate velit
+                      esse cillum
+                    </p>
+                  </div>
+                  <div class="item-right">
+                    <span class="item-price">$45.0</span>
+                    <div class="item-btn">
+                      <a href="">Order</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="item-wrapper">
+                  <div class="item-left">
+                    <h5>Grandpa's Country Fried Breakfast</h5>
+                    <p>
+                      Duis aute irure dolor in reprehenderit in voluptate velit
+                      esse cillum
+                    </p>
+                  </div>
+                  <div class="item-right">
+                    <span class="item-price">$30.0</span>
+                    <div class="item-btn">
+                      <a href="">Order</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="item-wrapper">
+                  <div class="item-left">
+                    <h5>Old Timer's Meat Breakfast</h5>
+                    <p>
+                      Duis aute irure dolor in reprehenderit in voluptate velit
+                      esse cillum
+                    </p>
+                  </div>
+                  <div class="item-right">
+                    <span class="item-price">$12.0</span>
+                    <div class="item-btn">
+                      <a href="">Order</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="item-wrapper">
+                  <div class="item-left">
+                    <h5>Chinese Chicken Bread Spicy Soup</h5>
+                    <p>
+                      Duis aute irure dolor in reprehenderit in voluptate velit
+                      esse cillum
+                    </p>
+                  </div>
+                  <div class="item-right">
+                    <span class="item-price">$ 12.0</span>
+                    <div class="item-btn">
+                      <a href="">Order</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--slide 3-->
+          </div>
+
+          <!--Meals end-->
+        </div>
+      </section>
+      <!--Our menu end-->
+
+      <!-- customer start -->
+      <section class="customer">
+        <div class="container">
+          <div class="customer-header" data-aos="fade-right">
+            <p>Testimonial</p>
+            <h5>Our Customer Says</h5>
+          </div>
+          <div class="customer-middle" data-aos="fade-up">
+            <i class="fa-solid fa-quote-left"></i>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Laudantium perferendis laboriosam nesciunt enim eum nulla
+              provident sed! Laudantium nostrum quos expedita accusantium
+              suscipit, amet quia maxime!
+            </p>
+            <div class="customer-name">
+              <span id="span1">TIMOTHY DOE</span>
+              <span id="span2">| Customer</span>
+            </div>
+          </div>
+          <div class="customer-footer" data-aos="fade-up">
+            <img src="/imagess/customer_1.jpg" alt="customer-1" />
+            <img src="/imagess/customer_2.jpg" alt="customer-2" />
+            <img src="/imagess/customer_3.jpg" alt="customer-3" />
+          </div>
+        </div>
+      </section>
+      <!-- customer end -->
+
+      <!--Reservation start-->
+      <section class="reservation">
+        <div
+          class="l-content-reservation"
+          data-aos="fade-right"
+          data-aos-offset="300"
+          data-aos-easing="ease-in-sine"
+        >
+          <div class="container">
+            <div class="reservation-title">
+              <h2>Make A Reservation</h2>
+              <p>You can call us directly at <span>225-88888</span></p>
+            </div>
+
+            <div class="reservation-form">
+              <div class="maydon">
+                <i class="fa-solid fa-phone">|</i>
+                <input type="tel" placeholder="number" />
+              </div>
+              <div class="maydon">
+                <i class="fa-solid fa-person"></i>
+                <span>|</span>
+                <select name="" id="">
+                  <option value="Person">1 Person</option>
+                  <option value="Person">2 Person</option>
+                  <option value="Person">3 Person</option>
+                  <option value="Person">4 Person</option>
+                  <option value="Person">5 Person</option>
+                  <option value="Person">6 Person</option>
+                  <option value="Person">7 Person</option>
+                  <option value="Person">8 Person</option>
+                  <option value="Person">9 Person</option>
+                  <option value="Person">10 Person</option>
+                  <option value="Person">11 Person</option>
+                  <option value="Person">12 Person</option>
+                  <option value="Person">13 Person</option>
+                </select>
+              </div>
+              <div class="maydon">
+                <i class="fa-solid fa-calendar">|</i>
+                <input type="date" />
+              </div>
+              <div class="maydon">
+                <i class="fa-solid fa-clock"></i>
+                <select name="" id="">
+                  <option value="Person">7:00 AM</option>
+                  <option value="Person">8:00 AM</option>
+                  <option value="Person">9:00 AM</option>
+                  <option value="Person">10:00 AM</option>
+                  <option value="Person">11:00 AM</option>
+                  <option value="Person">12:00 AM</option>
+                  <option value="Person">13:00 AM</option>
+                  <option value="Person">14:00 AM</option>
+                  <option value="Person">15:00 AM</option>
+                  <option value="Person">16:00 AM</option>
+                  <option value="Person">17:00 AM</option>
+                  <option value="Person">18:00 AM</option>
+                  <option value="Person">19:00 AM</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="reservation-button">
+              <a href="">find table</a>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="r-content-reservation"
+          data-aos="fade-left"
+          data-aos-offset="300"
+          data-aos-easing="ease-in-sine"
+        >
+          <img src="imagess/rasm.jpg" alt="reservation img" />
+        </div>
       </section>
 
-      <div class="container">
-        <div class="scrol">
-          <i class="fa-solid fa-chevron-up"></i>
-        </div>
-      </div>
+      <!--Reservation end-->
 
-      <!--serverce end-->
+      <!-- Our Service start    -->
+      <section class="our-service">
+        <div class="container">
+          <div class="our-service-title" data-aos="fade-right">
+            <h5>Our Service</h5>
+            <h2>What We Focus On</h2>
+          </div>
+          <div class="our-service-container" data-aos="fade-left">
+            <div class="our-service-content">
+              <div class="our-service-box">
+                <span>1</span>
+                <i class="fa-solid fa-utensils"></i>
+              </div>
+              <h5>Reservation</h5>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae
+                non vero tenetur
+              </p>
+            </div>
+            <div class="our-service-content">
+              <div class="our-service-box">
+                <span>2</span>
+                <i class="fa-solid fa-wine-glass-empty"></i>
+              </div>
+              <h5>Private Event</h5>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae
+                non vero tenetur
+              </p>
+            </div>
+            <div class="our-service-content">
+              <div class="our-service-box">
+                <span>3</span>
+                <i class="fa-solid fa-house"></i>
+              </div>
+              <h5>Online Order</h5>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae
+                non vero tenetur
+              </p>
+            </div>
+            <div class="our-service-content">
+              <div class="our-service-box">
+                <span>4</span>
+                <i class="fa-solid fa-bicycle"></i>
+              </div>
+              <h5>Fast Delivery</h5>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae
+                non vero tenetur
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Our Service end -->
+
+      <!--Our gallery start-->
+      <section class="our-gallery">
+        <div class="container">
+          <div class="our-gallery-title">
+            <h5>Our Gallery</h5>
+            <h2>Fooday Hot Dishes</h2>
+          </div>
+
+          <div class="our-gallery-container">
+            <div class="gallery-left">
+              <img src="imagess/gallery-1.jpg" alt="" />
+            </div>
+
+            <div class="gallery-center">
+              <div class="gallery-center-down">
+                <div class="gallery-center-down-l">
+                  <img src="imagess/gallery-2.jpg" alt="gallery-2" />
+                </div>
+                <div class="gallery-center-down-r">
+                  <img src="imagess/about-3.jpg" alt="gallery-3" />
+                </div>
+              </div>
+              <div class="gallery-center-up">
+                <div class="gallery-center-up-l">
+                  <img src="imagess/gallery-5.jpg" alt="gallery-5" />
+                </div>
+                <div class="gallery-cener-up-r">
+                  <img src="imagess/gallery-6.jpg" alt="gallery-6" />
+                </div>
+              </div>
+            </div>
+
+            <div class="gallery-right">
+              <img src="imagess/gallery-4.jpg" alt="gallery-4" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--Our gallery end-->
+
+      <!-- Updated from start -->
+      <section class="updated-from">
+        <div class="container">
+          <div class="updated-from-title" data-aos="fade-right">
+            <h5>Updated from</h5>
+            <h2>Our Featured Blog</h2>
+          </div>
+          <div class="updated-from-content">
+            <div class="updated-from-container" data-aos="fade-right">
+              <div class="updated-container-header">
+                <i class="fa-solid fa-eye"></i>
+                <span>18</span>
+                <span>|</span>
+                <i class="fa-solid fa-comment"></i>
+                <span>18</span>
+                <span>|</span>
+                <h4>Post By Admin</h4>
+              </div>
+
+              <div class="updated-container-img">
+                <img src="imagess/blog-grid-1.jpg" alt="updated-1" />
+                <h3>12 Jun</h3>
+              </div>
+
+              <div class="updated-container-footer">
+                <h4>How To Cook The Spicy Chinese Noodle For Cold Weather</h4>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur, sed do eiusmod tempor
+                  incididunt ut labore et dolore magna aliqua.
+                </p>
+                <button>Read More >></button>
+              </div>
+            </div>
+
+            <div class="updated-from-container" data-aos="fade-down">
+              <div class="updated-container-header">
+                <i class="fa-solid fa-eye"></i>
+                <span>18</span>
+                <span>|</span>
+                <i class="fa-solid fa-comment"></i>
+                <span>18</span>
+                <span>|</span>
+                <h4>Post By Admin</h4>
+              </div>
+
+              <div class="updated-container-img">
+                <img src="imagess/blog-grid-1-1.jpg" alt="updated-1" />
+                <h3>12 Jun</h3>
+              </div>
+
+              <div class="updated-container-footer">
+                <h4>How To Cook The Spicy Chinese Noodle For Cold Weather</h4>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur, sed do eiusmod tempor
+                  incididunt ut labore et dolore magna aliqua.
+                </p>
+                <button>Read More >></button>
+              </div>
+            </div>
+
+            <div class="updated-from-container" data-aos="fade-left">
+              <div class="updated-container-header">
+                <i class="fa-solid fa-eye"></i>
+                <span>18</span>
+                <span>|</span>
+                <i class="fa-solid fa-comment"></i>
+                <span>18</span>
+                <span>|</span>
+                <h4>Post By Admin</h4>
+              </div>
+
+              <div class="updated-container-img">
+                <img src="imagess/blog-grid-1-2.jpg" alt="updated-1" />
+                <h3>12 Jun</h3>
+              </div>
+
+              <div class="updated-container-footer">
+                <h4>How To Cook The Spicy Chinese Noodle For Cold Weather</h4>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur, sed do eiusmod tempor
+                  incididunt ut labore et dolore magna aliqua.
+                </p>
+                <button>Read More >></button>
+              </div>
+            </div>
+          </div>
+          <div class="updated-from-footer">
+            <div class="updated-footer-l" data-aos="fade-down-right">
+              <img src="imagess/updated-img.png" alt="img">
+            </div>
+            <div class="updated-from-center" data-aos="fade-right">
+              <h2>Subcribe Us Now</h2>
+              <p>Get more news and delicious dishes everyday from us</p>
+            </div>
+            <div class="updated-from-r"  data-aos="fade-left">
+              <input type="email" name="" id="">
+              <span>|</span>
+              <i class="fa-brands fa-telegram"></i>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer start -->
+      <section class="restoran_footer">
+        <div class="container">
+          <div class="left-footer">
+            <div class="left-footer_title">
+              <div class="left_footer_l_title" data-aos="fade-down-right">
+                <i class="fa-solid fa-utensils"></i>
+                <h2>Restoran</h2>
+              </div>
+              <div class="left_footer_r_title" data-aos="fade-down">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-pinterest"></i>
+                <i class="fa-brands fa-google-plus"></i>
+              </div>
+            </div>
+            <div class="left_footer_content" data-aos="fade-down-right">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat Duis aute irure dolor
+              </p>
+            </div>
+            <div class="left_footer_location" data-aos="fade-right">
+              <div class="location">
+                <i class="fa-solid fa-location-dot"></i>
+                <h5>
+                  157 White Oak Drive Kansas City <br />
+                  689 Lynn Street South Boston
+                </h5>
+              </div>
+
+              <div class="location">
+                <i class="fa-solid fa-tablet-button"></i>
+                <h5>
+                  (617)-276-8031 <br />
+                  (617)-276-8031
+                </h5>
+              </div>
+
+              <div class="location">
+                <i class="fa-solid fa-envelope"></i>
+                <h5>
+                  admin@fooday.com <br />
+                  support@fooday.com
+                </h5>
+              </div>
+            </div>
+          </div>
+
+          <div class="right-footer" data-aos="fade-down-left">
+            <div class="right-content">
+              <h1>Open Hour</h1>
+              <p>Tuesday: .......................... 7AM - 9PM</p>
+              <p>Wednesday: ..................... 7AM - 9PM</p>
+              <p>Thursday: ......................... 7AM - 9PM</p>
+              <p>Friday: ............................... 7AM - 9PM</p>
+              <p>Saturday: ........................... 7AM - 9PM</p>
+              <p>Sunday: ............................. 7AM - 9PM</p>
+              <p>Monday: ............................. Close</p>
+              <h2>Reservation</h2>
+              <h2>Numbers</h2>
+              <h2>(617)-276-8031</h2>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Footer end -->
     </main>
     <!--main end -->
     <script src="js/script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   </body>
 </html>

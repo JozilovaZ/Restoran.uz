@@ -470,7 +470,7 @@ header.scrolled {
 .about-image:nth-child(3) {
   grid-column: 1/2;
   grid-row: 2/3;
-  margin-top: -20px;
+  margin-top: 10px;
 }
 .about-image:nth-child(4) {
   grid-column: 2/3;
